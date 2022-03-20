@@ -12,14 +12,5 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^4.7.4"
-  },
-  "babel": {
-    "presets": [
-      "./node_modules/@rails/webpacker/package/babel/preset.js"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-private-methods"
-    ]
   }
 }
