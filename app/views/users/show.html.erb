@@ -1,16 +1,18 @@
 <% provide(:title, @user.name) %>
 
-<div class="like-index text-center">
+<div class="like-title text-center">
   <div class="user-name">
     <%= @user.name %>さんのお気に入り
   </div>
+</div>
+<ul>
   <% if @user.likes.any? %>
     <% @likes.each do |song| %>
-      <div id="song_<%= song.id %>">
+      <li id="song_<%= song.id %>">
         <%= link_to song.name_en, song %>
-      </div>
+      </li>
     <% end %>
   <% else %>
     お気に入りはまだ登録されていません
   <% end %>
-</div>
+</ul>
