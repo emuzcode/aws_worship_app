@@ -1,0 +1,250 @@
+<script language="javascript" type="text/javascript">
+  
+  // chord name data
+  <%= render 'chord_name_data' %>
+  
+  //chord img data
+  <%= render 'chord_img_path_data' %>
+  
+  
+  // functions
+  
+  const select_form = document.getElementById("key");
+  let default_key = select_form.options[select_form.selectedIndex].value;
+  
+  function default_set() {
+    let sharp_key = default_key.split('');
+    localStorage.setItem('current_key', sharp_key[1]);
+    let current_key = Number(localStorage.getItem('current_key'));
+    
+    if (sharp_key[0].includes("+")) {
+      sharp(current_key);
+    } else if (sharp_key[0].includes("-")){
+      flat(current_key);
+    }
+  }
+
+  function sharp(selected_value) {
+    let sharp1 = selected_value + 0;
+    let sharp2 = selected_value + 2;
+    let sharp3 = selected_value + 4;
+    let sharp4 = selected_value + 5;
+    let sharp5 = selected_value + 7;
+    let sharp6 = selected_value + 9;
+    let sharp7 = selected_value + 15;
+
+    // 1 
+    
+    if (sharp1 >= 12) {
+      sharp1 = sharp1 - 12;
+    }
+    const cname1 = document.getElementsByClassName('chord_name1');
+    for ( let i = 0; i < cname1.length; i++) {
+      cname1[i].innerHTML = major_sharp[sharp1];
+    }
+    const cimg1 = document.getElementsByClassName('chord_img1');
+    for ( let i = 0; i < cimg1.length; i++) {
+      cimg1[i].src = major_img[sharp1];
+    }
+    
+    //2
+    
+    if (sharp2 >= 12) {
+      sharp2 = sharp2 - 12;
+    }
+    const cname2 = document.getElementsByClassName('chord_name2');
+    for ( let i = 0; i < cname2.length; i++) {
+      cname2[i].innerHTML = minor_sharp[sharp2];
+    }
+    const cimg2 = document.getElementsByClassName('chord_img2');
+    for ( let i = 0; i < cimg2.length; i++) {
+      cimg2[i].src = minor_img[sharp2];
+    }
+    
+    //3
+    
+    if (sharp3 >= 12) {
+      sharp3 = sharp3 - 12;
+    }
+    const cname3 = document.getElementsByClassName('chord_name3');
+    for ( let i = 0; i < cname3.length; i++) {
+      cname3[i].innerHTML = minor_sharp[sharp3];
+    }
+    const cimg3 = document.getElementsByClassName('chord_img3');
+    for ( let i = 0; i < cimg3.length; i++) {
+      cimg3[i].src = minor_img[sharp3];
+    }
+
+    //4
+    
+    if (sharp4 >= 12) {
+      sharp4 = sharp4 - 12;
+    }
+    const cname4 = document.getElementsByClassName('chord_name4');
+    for ( let i = 0; i < cname4.length; i++) {
+      cname4[i].innerHTML = major_sharp[sharp4];
+    }
+    const cimg4 = document.getElementsByClassName('chord_img4');
+    for ( let i = 0; i < cimg4.length; i++) {
+      cimg4[i].src = major_img[sharp4];
+    }
+    
+    //5
+    
+    if (sharp5 >= 12) {
+      sharp5 = sharp5 - 12;
+    }
+    const cname5 = document.getElementsByClassName('chord_name5');
+    for ( let i = 0; i < cname5.length; i++) {
+      cname5[i].innerHTML = major_sharp[sharp5];
+    }
+    const cimg5 = document.getElementsByClassName('chord_img5');
+    for ( let i = 0; i < cimg5.length; i++) {
+      cimg5[i].src = major_img[sharp5];
+    }
+    
+    //6
+    
+    if (sharp6 >= 12) {
+      sharp6 = sharp6 - 12;
+    }
+    const cname6 = document.getElementsByClassName('chord_name6');
+    for ( let i = 0; i < cname6.length; i++) {
+      cname6[i].innerHTML = minor_sharp[sharp6];
+    }
+    const cimg6 = document.getElementsByClassName('chord_img6');
+    for ( let i = 0; i < cimg6.length; i++) {
+      cimg6[i].src = minor_img[sharp6];
+    }
+    
+    //7
+
+    if (sharp7 >= 12) {
+      sharp7 = sharp7 - 12;
+    }
+    const cname7 = document.getElementsByClassName('chord_name7');
+    for ( let i = 0; i < cname7.length; i++) {
+      cname7[i].innerHTML = minor_7_b5_sharp[sharp7];
+    }
+    const cimg7 = document.getElementsByClassName('chord_img7');
+    for ( let i = 0; i < cimg7.length; i++) {
+      cimg7[i].src = minor_7_b5_img[sharp7];
+    }
+  }
+  
+  function flat(selected_value) {
+    let flat1 = selected_value + 0;
+    let flat2 = selected_value + 2;
+    let flat3 = selected_value + 4;
+    let flat4 = selected_value + 5;
+    let flat5 = selected_value + 7;
+    let flat6 = selected_value + 9;
+    let flat7 = selected_value + 11;
+    
+    //1
+    
+    if (flat1 >= 12) {
+      flat1 = flat1 - 12;
+    }
+    const cname1 = document.getElementsByClassName('chord_name1');
+    for ( let i = 0; i < cname1.length; i++) {
+      cname1[i].innerHTML = major_flat[flat1];
+    }
+    const cimg1 = document.getElementsByClassName('chord_img1');
+    for ( let i = 0; i < cimg1.length; i++) {
+      cimg1[i].src = major_img[flat1];
+    }
+    
+    //2
+    
+    if (flat2 >= 12) {
+      flat2 = flat2 - 12;
+    }
+    const cname2 = document.getElementsByClassName('chord_name2');
+    for ( let i = 0; i < cname2.length; i++) {
+      cname2[i].innerHTML = minor_flat[flat2];
+    }
+    const cimg2 = document.getElementsByClassName('chord_img2');
+    for ( let i = 0; i < cimg2.length; i++) {
+      cimg2[i].src = minor_img[flat2];
+    }
+    
+    //3
+    
+    if (flat3 >= 12) {
+      flat3 = flat3 - 12;
+    }
+    const cname3 = document.getElementsByClassName('chord_name3');
+    for ( let i = 0; i < cname3.length; i++) {
+      cname3[i].innerHTML = minor_flat[flat3];
+    }
+    const cimg3 = document.getElementsByClassName('chord_img3');
+    for ( let i = 0; i < cimg3.length; i++) {
+      cimg3[i].src = minor_img[flat3];
+    }
+    
+    //4
+    
+    if (flat4 >= 12) {
+      flat4 = flat4 - 12;
+    }
+    const cname4 = document.getElementsByClassName('chord_name4');
+    for ( let i = 0; i < cname4.length; i++) {
+      cname4[i].innerHTML = major_flat[flat4];
+    }
+    const cimg4 = document.getElementsByClassName('chord_img4');
+    for ( let i = 0; i < cimg4.length; i++) {
+      cimg4[i].src = major_img[flat4];
+    }
+    
+    //5
+    
+    if (flat5 >= 12) {
+      flat5 = flat5 - 12;
+    }
+    const cname5 = document.getElementsByClassName('chord_name5');
+    for ( let i = 0; i < cname5.length; i++) {
+      cname5[i].innerHTML = major_flat[flat5];
+    }
+    const cimg5 = document.getElementsByClassName('chord_img5');
+    for ( let i = 0; i < cimg5.length; i++) {
+      cimg5[i].src = major_img[flat5];
+    }
+    
+    //6
+    
+    if (flat6 >= 12) {
+      flat6 = flat6 - 12;
+    }
+    const cname6 = document.getElementsByClassName('chord_name6');
+    for ( let i = 0; i < cname6.length; i++) {
+      cname6[i].innerHTML = minor_flat[flat6];
+    }
+    const cimg6 = document.getElementsByClassName('chord_img6');
+    for ( let i = 0; i < cimg6.length; i++) {
+      cimg6[i].src = minor_img[flat6];
+    }
+    
+    //7
+    
+    if (flat7 >= 12) {
+      flat7 = flat7 - 12;
+    }
+    const cname7 = document.getElementsByClassName('chord_name7');
+    for ( let i = 0; i < cname7.length; i++) {
+      cname7[i].innerHTML = minor_7_b5_flat[flat7];
+    }
+    const cimg7 = document.getElementsByClassName('chord_img7');
+    for ( let i = 0; i < cimg7.length; i++) {
+      cimg7[i].src = minor_7_b5_img[flat7];
+    }
+  }
+  
+  function change(){
+    default_key = this.value;
+    default_set();
+  }
+  select_form.onchange = change;
+  
+  default_set(); // main function
+</script>

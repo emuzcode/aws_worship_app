@@ -1,0 +1,23 @@
+<div>
+  <!--検索対象モデルがSingerの時 -->
+  <% if @range == "Singer" %>
+    <h2>"<%= pluralize(@singers.count, "tab") %>" found..</h2>
+    <ul class="singers">
+      <% @singers.each do |singer| %>
+        <li>
+          <%= link_to singer.name_en, singer %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <h2>"<%= pluralize(@songs.count, "tab") %>" found..</h2>
+    <!--検索対象モデルがSingerではない時(= 検索対象モデルがSongの時) -->
+    <ul class="songs">
+      <% @songs.each do |song| %>
+        <li>
+          <%= link_to song.name_en, song %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

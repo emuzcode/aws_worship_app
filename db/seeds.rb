@@ -35,8 +35,8 @@ User.create!(name:  "Motoyui",
   activated: true,
   activated_at: Time.zone.now)
 
-jworship = Singer.create!(name_jp: "J Worship",
-  name_en: "J Worship")
+jworship = Singer.create!(name_jp: "Jworship",
+  name_en: "Jworship")
 
 Song.create!(name_jp: "花も",
 name_en: "Hanamo",

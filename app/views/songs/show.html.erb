@@ -1,0 +1,14 @@
+<h1><%= @song.name_jp %> / <%= @song.name_en %></h1>
+<h2>by
+    <%= link_to @singer.name_jp, back_to_singer_path(singer_id: @singer.id) %> / 
+    <%= link_to @singer.name_en, back_to_singer_path(singer_id: @singer.id) %>
+</h2>
+
+<!--　お気に入りボタン 
+<div id="likes_buttons_<%= @song.id %>">
+<%#= render partial: 'likes/like', locals: {post: @song} %>
+</div>-->
+
+<!-- メインコンテンツ-->
+<%= render "songs/#{@singer.name_en[0].downcase}/#{@singer.name_en.split.join.downcase}/#{@song.name_en.split.join.downcase}" %>
+<%= render 'script' %>

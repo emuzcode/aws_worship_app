@@ -13,8 +13,17 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+html {
+  background-color: #222222;
+  color: white;
+  font-family: "proxima_nova", Helvetica, Arial, sans-serif;
+}
+
 body {
   padding-top: 60px;
+  background-color: #222222;
+  color: white;
+  font-family: "proxima_nova", Helvetica, Arial, sans-serif;
 }
 
 section {
@@ -66,17 +75,20 @@ p {
 
 /* header */
 
+.header {
+  background-color: #222222;
+  color: white;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 1.2em;
   color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  letter-spacing: 2px;
+  padding-top: 12px;
   &:hover {
-    color: white;
+    color: $gray-light;
     text-decoration: none;
   }
 }
@@ -91,7 +103,7 @@ footer {
   a {
     color: $gray;
     &:hover {
-      color: $gray-darker;
+      color: white;
     }
   }
   small {

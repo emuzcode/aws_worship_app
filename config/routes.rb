@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'singers/:id', to: 'singers#show', as: 'singer'
   get 'singers/:singer_id', to: 'singers#back_to_singer', as: 'back_to_singer'
   #songs
+  resources :songs, only: [:show], as: 'song'
   #search
   get 'search', to: 'search#search_results'
   #likes
