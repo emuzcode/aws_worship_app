@@ -16,14 +16,14 @@ $gray-medium-light: #eaeaea;
 html {
   background-color: #222222;
   color: white;
-  font-family: "proxima_nova", Helvetica, Arial, sans-serif;
+  font-family: "ProximaNova", Helvetica, Arial, sans-serif;
 }
 
 body {
   padding-top: 60px;
   background-color: #222222;
   color: white;
-  font-family: "proxima_nova", Helvetica, Arial, sans-serif;
+  font-family: "ProximaNova", Helvetica, Arial, sans-serif;
 }
 
 section {
@@ -34,10 +34,34 @@ textarea {
   resize: vertical;
 }
 
+.main-title {
+  margin: 50px 0px;
+  .title {
+    letter-spacing: normal;
+    font-family: "ProximaNova";
+    font-size: 3em;
+  }
+}
+
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
+  }
+  a {
+    font-size: medium;
+    color: $gray-light;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.alphabets {
+  margin-bottom: 20px;
+  a {
+    font-size: 20px;
+    letter-spacing: 10px;
   }
 }
 

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_095329) do
+ActiveRecord::Schema.define(version: 2022_03_22_191859) do
+
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "song_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["song_id"], name: "index_likes_on_song_id"
+    t.index ["user_id", "created_at"], name: "index_likes_on_user_id_and_created_at"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
 
   create_table "singers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name_jp"
@@ -40,5 +50,7 @@ ActiveRecord::Schema.define(version: 2022_03_22_095329) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "likes", "songs"
+  add_foreign_key "likes", "users"
   add_foreign_key "songs", "singers"
 end

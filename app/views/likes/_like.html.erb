@@ -1,0 +1,19 @@
+<% if logged_in? %>
+  <div id="like_area">
+    <% if current_user.liked?(@song.id) %>
+      <%= link_to "Unfavorite", destroy_like_path(@song),
+                                method: :delete, 
+                                class: "btn btn-default", 
+                                remote: true %>
+    <% else %>
+      <%= link_to "Favorite", create_like_path(@song), 
+                              method: :post, 
+                              class: "btn btn-info", 
+                              remote: true %>
+    <% end %>
+  </div>
+<% else %>
+  <div id="like_area">
+    <%= link_to "Favorite", login_path, 
+                            class: "btn btn-info" %>
+<% end %>
