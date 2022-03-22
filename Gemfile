@@ -13,6 +13,9 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.10.3', require: false
 
+gem 'will_paginate',           '3.3.1' # ページネーション
+gem 'bootstrap-will_paginate', '1.0.0' # ページネーション for Bootstrap
+gem 'faker',                   '2.20.0' #Sample datas
 gem 'bcrypt',         '3.1.13' # パスワードをハッシュ化
 gem 'bootstrap-sass', '3.4.1' # LESS CSS to Sass for Bootstrap 
 
