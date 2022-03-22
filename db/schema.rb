@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_22_092359) do
+ActiveRecord::Schema.define(version: 2022_03_22_095329) do
+
+  create_table "singers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name_jp"
+    t.string "name_en"
+  end
+
+  create_table "songs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.string "name_jp"
+    t.string "name_en"
+    t.bigint "singer_id"
+    t.index ["singer_id"], name: "index_songs_on_singer_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -28,4 +40,5 @@ ActiveRecord::Schema.define(version: 2022_03_22_092359) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "songs", "singers"
 end
