@@ -23,7 +23,7 @@ module SessionsHelper
       end
     elsif cookies.signed[:user_id] # 記憶トークンcookieに対応するユーザーを返す
       user = User.find_by(id: cookies.signed[:user_id])
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end
