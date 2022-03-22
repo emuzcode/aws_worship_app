@@ -1,0 +1,9 @@
+<h1>All "<%= @alphabet.upcase %>" Singers</h1>
+
+<ul class="singers">
+  <% @singers.each do |singer| %>
+    <li>
+      <%= link_to singer.name_en, singer %>
+    </li>
+  <% end %>
+</ul>

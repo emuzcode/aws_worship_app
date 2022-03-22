@@ -1,16 +1,51 @@
 <% provide(:title, "") %>
 
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
-
+<div class="center">
+  <h1>Praise Him with the Strings</h1>
   <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
+      This worship app is FREE =>
+      <%= link_to "Sign up", signup_path, class: "btn" %>
   </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-                      "https://rubyonrails.org/" %>
+<div class="center alphabets">
+    <%= link_to "a", singers_path(alphabet_id: "a") %>
+    <%= link_to "b", singers_path(alphabet_id: "b") %>
+    <%= link_to "c", singers_path(alphabet_id: "c") %>
+    <%= link_to "d", singers_path(alphabet_id: "d") %>
+    <%= link_to "e", singers_path(alphabet_id: "e") %>
+    <%= link_to "f", singers_path(alphabet_id: "f") %>
+    <%= link_to "g", singers_path(alphabet_id: "g") %>
+    <%= link_to "h", singers_path(alphabet_id: "h") %>
+    <%= link_to "i", singers_path(alphabet_id: "i") %>
+    <%= link_to "j", singers_path(alphabet_id: "j") %>
+    <%= link_to "k", singers_path(alphabet_id: "k") %>
+    <%= link_to "l", singers_path(alphabet_id: "l") %>
+    <%= link_to "m", singers_path(alphabet_id: "m") %>
+    <%= link_to "n", singers_path(alphabet_id: "n") %>
+    <%= link_to "o", singers_path(alphabet_id: "o") %>
+    <%= link_to "p", singers_path(alphabet_id: "p") %>
+    <%= link_to "q", singers_path(alphabet_id: "q") %>
+    <%= link_to "r", singers_path(alphabet_id: "r") %>
+    <%= link_to "s", singers_path(alphabet_id: "s") %>
+    <%= link_to "t", singers_path(alphabet_id: "t") %>
+    <%= link_to "u", singers_path(alphabet_id: "u") %>
+    <%= link_to "v", singers_path(alphabet_id: "v") %>
+    <%= link_to "w", singers_path(alphabet_id: "w") %>
+    <%= link_to "x", singers_path(alphabet_id: "x") %>
+    <%= link_to "y", singers_path(alphabet_id: "y") %>
+    <%= link_to "z", singers_path(alphabet_id: "z") %>
+</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with url: search_path, local: true, method: :get do |f| %>
+      <%= f.text_field :keyword, class: 'form-control' %>
+      <%= f.select :range, options_for_select([['Singer'], ['Song']]), { include_blank: '*Please Selected' }, { id: "range", class: "form-control" } %>
+      <%= f.submit "Search", class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to image_tag("worship_app_logo.png", 
+                 alt: "Worship App logo",
+                 width: "200px"), root_path %>

@@ -1,0 +1,9 @@
+<h1>All songs by <%= @singer.name_jp %> / <%= @singer.name_en %></h1>
+
+<ul class="songs">
+  <% @songs.each do |song| %>
+    <li>
+      <%= link_to song.name_en, song %>
+    </li>
+  <% end %>
+</ul>
