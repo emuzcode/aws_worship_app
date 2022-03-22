@@ -8,7 +8,7 @@
 
 # メインのサンプルユーザーを1人作成する
 User.create!(name:  "Example User",
-  email: "example@railstutorial.org",
+  email: "user@example.com",
   password:              "foobar",
   password_confirmation: "foobar",
   admin:     true,
@@ -18,7 +18,7 @@ User.create!(name:  "Example User",
 # 追加のユーザーをまとめて生成する
 40.times do |n|
 name  = Faker::Name.name
-email = "example-#{n+1}@railstutorial.org"
+email = "example-#{n+1}@example.com"
 password = "password"
 User.create!(name:  name,
     email: email,
@@ -27,3 +27,25 @@ User.create!(name:  name,
     activated: true,
     activated_at: Time.zone.now)
 end
+
+User.create!(name:  "Motoyui",
+  email: "motoyui@example.com",
+  password:              "motoyui",
+  password_confirmation: "motoyui",
+  activated: true,
+  activated_at: Time.zone.now)
+
+jworship = Singer.create!(name_jp: "J Worship",
+  name_en: "J Worship")
+
+Song.create!(name_jp: "花も",
+name_en: "Hanamo",
+singer_id: jworship.id)
+
+Song.create!(name_jp: "主は良いお方",
+name_en: "Shuwayoiokata",
+singer_id: jworship.id)
+
+Song.create!(name_jp: "傷跡",
+name_en: "Kizuato",
+singer_id: jworship.id)
