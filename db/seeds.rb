@@ -28,10 +28,10 @@ User.create!(name:  name,
     activated_at: Time.zone.now)
 end
 
-User.create!(name:  "株式会社 Motoyui",
-  email: "motoyui@motoyui.com",
-  password:              "motoyui",
-  password_confirmation: "motoyui",
+User.create!(name:  "Thank You For Logging This Web App !!",
+  email: "test@test.com",
+  password:              "test1234",
+  password_confirmation: "test1234",
   activated: true,
   activated_at: Time.zone.now)
 
