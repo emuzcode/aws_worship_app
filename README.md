@@ -38,7 +38,7 @@
 ### 言語
 - - -
 
-##### HTML5, CSS3, Saas, JavaScript, jQuery, SQL, Ruby 2.7.3
+##### HTML5, CSS3, Sass, JavaScript, jQuery, SQL, Ruby 2.7.3
 
 ### フレームワーク
 - - -
