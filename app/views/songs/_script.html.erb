@@ -33,6 +33,25 @@
     let sharp6 = selected_value + 9;
     let sharp7 = selected_value + 15;
 
+    // try
+    /*
+    const array = [...Array(7)].map((_, i) => i + 1);
+    array.forEach(function( value ) {
+        console.log( value );
+        console.log("chord_name" + value);
+        console.log(eval("sharp" + value));
+        if (eval("sharp" + value) >= 12){
+          eval("sharp" + value) -= 12;
+        }
+        for (let i = 0; i < eval("cname" + value).length; i++) {
+          eval("cname" + value)[i].innerHTML = major_sharp[eval("sharp" + value)];
+        }
+        for (let i = 0; i < eval("cimg" + value).length; i++) {
+          eval("cimg" + value).src = major_img[eval("sharp" + value)];
+        }
+    });
+    */
+
     // 1 
     
     if (sharp1 >= 12) {
