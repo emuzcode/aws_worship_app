@@ -18,6 +18,10 @@
 
 ### AWS: VPC(Amazon Virtual Private Cloud), RDS(Amazon Relational Database Service), EC2(Amazon Elastic Compute Cloud), Route 53, ACM(Certificate Manager), ALB(Application Load Balancer)
 
+##### 構成図
+
+![構成図aws_worship_app](https://user-images.githubusercontent.com/84742299/161867694-66e64864-e221-4375-bd24-fe0475a5f38e.png)
+
 ### データベース: MySQL
 
 ### セキュリティ: bcrypt, SecureRandom モジュール(urlsafe_base64)
